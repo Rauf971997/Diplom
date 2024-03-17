@@ -1,7 +1,15 @@
-
 import React, { useRef, useEffect } from 'react';
 
-const Player = ({ activeSong, isPlaying, volume, seekTime, onEnded, onTimeUpdate, onLoadedData, repeat }) => {
+const Player = ({
+  activeSong,
+  isPlaying,
+  volume,
+  seekTime,
+  onEnded,
+  onTimeUpdate,
+  onLoadedData,
+  repeat,
+}) => {
   const ref = useRef(null);
   if (ref.current) {
     if (isPlaying) {
@@ -27,7 +35,9 @@ const Player = ({ activeSong, isPlaying, volume, seekTime, onEnded, onTimeUpdate
       onEnded={onEnded}
       onTimeUpdate={onTimeUpdate}
       onLoadedData={onLoadedData}
-    />
+    >
+      <track kind="captions" src="" />
+    </audio>
   );
 };
 
