@@ -13,6 +13,41 @@ import 'swiper/css/free-mode';
 
 
 
-const TopPlay = () => <div>TopPlay</div>;
+const TopPlay = () => {
+const dispatch = useDispatch();
+const [activeSong, isPlaying] = useSelector((state)=>state.player);
+
+const { data} =useGetTopChartsQuery();
+const divRef =useRef(null);
+
+useEffect(()=>{
+  divRef.current.scrollIntoView({ behavior : 'smooth'});
+});
+
+const topPlays = data?.slice(0, 5);
+
+const handlePauseClick = () => {
+  dispatch(playPause(false));
+};
+
+const handlePlayClick = () => {
+  dispatch(setActiveSongs({ song, data, i }));
+  dispatch(playPause(true));
+};
+
+return (
+ <div ref={divRef} className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1 xl:max-w-[500px] max-w-full flex flex-col">
+  <div className="w-full flex flex-col">
+   <div className="flex flex-row justify-between items-center">
+       <h2>Top Charts</h2>
+       <Link  to="/top-charts">
+         <p>See more</p>
+       </Link>
+   </div>
+  </div>
+
+ </div>
+)
+};
 
 export default TopPlay;
