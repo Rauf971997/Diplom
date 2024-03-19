@@ -28,11 +28,13 @@ export const shazamCoreApi = createApi({
         getTopCharts: builder.query({
             query: () => '/charts/world',
         }),
+        getSongDetails: builder.query({ query: ( {songid} ) => `/tracks/details?track_id=${songid}` }),
     }),
 });
 
 export const {
     useGetTopChartsQuery,
+    useGetSongDetailsQuery,
 } = shazamCoreApi
 
 
