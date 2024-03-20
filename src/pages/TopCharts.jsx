@@ -1,3 +1,7 @@
-const TopCharts = () => <div>TopCharts</div>;
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-export default TopCharts;
+import { Error, Loader, SongCard } from '../components';
+import { useGetTopChartsQuery } from '../redux/services/shazamCore';
+
+
