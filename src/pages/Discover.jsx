@@ -10,7 +10,7 @@ import { genres } from '../data/genres';
 const Discover = () => {
   const dispatch = useDispatch();
   const { activeSong, isPlaying,  genreListId  } = useSelector((state) => state.player);
-  const { data, isFetching, error } = useGetSongsByGenreQuery(genreListId || 'POP');
+  const { data, isFetching, error } = useGetSongsByGenreQuery(genreListId || 'ROCK');
   const genreTitle = genres.find(({ value }) => value === genreListId)?.title;
 
   if (isFetching) return <Loader title="Loading songs..." />;
@@ -25,7 +25,7 @@ const Discover = () => {
 
         <select
           onChange={(e) => dispatch(selectGenreListId(e.target.value))}
-          value={genreListId || 'pop'}
+          value={genreListId || 'rock'}
           className="bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5"
         >
           {genres.map((genre) => <option key={genre.value} value={genre.value}>{genre.title}</option>)}

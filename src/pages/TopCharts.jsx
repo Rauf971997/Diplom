@@ -28,6 +28,7 @@ const TopCharts = () => {
           />
         ))}
       </div>
+
     </div>
   );
 };
