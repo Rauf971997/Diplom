@@ -28,7 +28,7 @@ const TopCharts = () => {
           />
         ))}
       </div>
-
+   
     </div>
   );
 };
