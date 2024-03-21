@@ -50,7 +50,8 @@ const TopPlay = () => {
     divRef.current.scrollIntoView({ behavior: "smooth" });
   });
 
-  const topPlays = data?.slice(0, 5);
+  const topPlays = data?.slice(3, 6);
+  const topArtists = data?.slice(2, 6);
 
   const handlePauseClick = () => {
     dispatch(playPause(false));
@@ -104,14 +105,14 @@ const TopPlay = () => {
   centeredSlidesBounds
   className="mt-4"
 >
-  {topPlays?.map((song, i) => (
+  {topArtists?.map((song, i) => (
     <SwiperSlide
       key={song?.id}
       style={{ width: '25%', height: 'auto' }}
       className="shadow-lg rounded-full animate-slideright"
     >
       <Link to={`/artists/${song?.artists[0].adamid}`}>
-        <img src={song?.images.background} alt="name" className="rounded-full w-full object-cover" />
+        <img src={song?.images.background} alt="name" className="rounded-full w-[90%] object-cover" />
       </Link>
     </SwiperSlide>
   ))}
