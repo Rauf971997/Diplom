@@ -1,0 +1,30 @@
+.nav-links{
+    margin-top: 10;
+}
+
+.nav-link::backdrop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 32px 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+   color: rgb(156 163 175);
+}
+
+
+.sidebar-desktop{
+    display: none;
+}
+/* Sidebar Desktop */
+@media (min-width: 768px) {
+    .sidebar-desktop {
+      display: flex;
+      flex-direction: column; 
+      width: 240px; 
+      padding: 40px 16px; 
+      background: url("../../assets/sidebar.jpg");
+    }
+  }

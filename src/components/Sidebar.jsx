@@ -4,15 +4,16 @@ import { RiCloseLine } from "react-icons/ri";
 import logo from "../assets/logo.png";
 import {links} from "../data/links"
 import { HiOutlineMenu } from "react-icons/hi";
+import "./Sidebar/Sidebar.css";
 
 const NavLinks = ({handleClick}) => {
   return (
-    <div className="mt-10">
+    <div className="nav-links">
       {links.map((item) => (
         <NavLink
           key={item.name}
           to={item.to}
-          className="flex flex-row justify-start items-center my-8 text-sm font-medium text-gray-400 hover:text-cyan-400"
+          className="nav-link"
           onClick={() =>handleClick && handleClick()}
         >
           <item.icon className="w-6 h-6 mr-2" />
@@ -28,7 +29,7 @@ const Sidebar = () => {
 
   return (
     <>
-    <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#191624]">
+    <div className="sidebar-desktop ">
       <img src={logo} alt="logo" className="w-full h-20 object-contain" />
       <NavLinks />
     </div>
