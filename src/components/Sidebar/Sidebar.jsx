@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RiCloseLine } from "react-icons/ri";
-import logo from "../assets/logo.png";
-import {links} from "../data/links"
+import logo from "../../assets/logo.png"
+import {links} from "../../data/links"
 import { HiOutlineMenu } from "react-icons/hi";
-import "./Sidebar/Sidebar.css";
+import "./Sidebar.css";
 
 const NavLinks = ({handleClick}) => {
   return (

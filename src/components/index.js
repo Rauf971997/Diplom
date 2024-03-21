@@ -1,4 +1,4 @@
-import Sidebar from './Sidebar';
+import Sidebar from './Sidebar/Sidebar';
 import Searchbar from './Searchbar';
 import SongCard from './SongCard';
 import TopPlay from './TopPlay';
