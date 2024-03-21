@@ -41,3 +41,14 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+
+/* App Background style */
+
+.content{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  background: url("./assets/121806.jpg");
+
+}
