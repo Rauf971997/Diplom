@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { RiCloseLine } from "react-icons/ri";
 import logo from "../../assets/logo.webp";
 import { links } from "../../data/links";
-import { HiOutlineMenu } from "react-icons/hi";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import "./Sidebar.css";
 
 const NavLinks = ({ handleClick }) => {
@@ -16,7 +15,7 @@ const NavLinks = ({ handleClick }) => {
           className="nav-link"
           onClick={() => handleClick && handleClick()}
         >
-          <item.icon className="w-6 h-6 mr-2" />
+          <item.icon className="icon" />
           {item.name}
         </NavLink>
       ))}
@@ -40,12 +39,12 @@ const Sidebar = () => {
       {/* Mobile menu */}
       <div className="burger">
         {mobileMenuOpen ? (
-          <RiCloseLine
+          <AiOutlineClose
             className="close-line"
             onClick={() => setMobileMenuOpen(false)}
           />
         ) : (
-          <HiOutlineMenu
+          <AiOutlineMenu
             className="open-line"
             onClick={() => setMobileMenuOpen(true)}
           />
