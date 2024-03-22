@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RiCloseLine } from "react-icons/ri";
-import logo from "../../assets/logo.webp"
-import {links} from "../../data/links"
+import logo from "../../assets/logo.webp";
+import { links } from "../../data/links";
 import { HiOutlineMenu } from "react-icons/hi";
 import "./Sidebar.css";
 
-const NavLinks = ({handleClick}) => {
+const NavLinks = ({ handleClick }) => {
   return (
     <div className="nav-links">
       {links.map((item) => (
@@ -14,7 +14,7 @@ const NavLinks = ({handleClick}) => {
           key={item.name}
           to={item.to}
           className="nav-link"
-          onClick={() =>handleClick && handleClick()}
+          onClick={() => handleClick && handleClick()}
         >
           <item.icon className="w-6 h-6 mr-2" />
           {item.name}
@@ -29,29 +29,37 @@ const Sidebar = () => {
 
   return (
     <>
-    <div className="sidebar-desktop ">
-      <img src={logo} alt="logo" className="w-full h-20 object-contain" />
-      <NavLinks />
-    </div>
+      <div className="sidebar-desktop ">
+        <div className="logo-container">
+          <img src={logo} alt="logo" className="logo" />
+          <span class="logo-text">MeloMagic</span>
+        </div>
+        <NavLinks />
+      </div>
 
-{/* Mobile menu */}
-  <div className="absolute md:hidden block top-6 right-3">
+      {/* Mobile menu */}
+      <div className="burger">
         {mobileMenuOpen ? (
-          <RiCloseLine className="w-6 h-6 text-white mr-2" 
-          onClick={() => setMobileMenuOpen(false)}
+          <RiCloseLine
+            className="close-line"
+            onClick={() => setMobileMenuOpen(false)}
           />
         ) : (
-          <HiOutlineMenu className="w-6 h-6 text-white mr-2"
-          onClick={() => setMobileMenuOpen(true)}
+          <HiOutlineMenu
+            className="open-line"
+            onClick={() => setMobileMenuOpen(true)}
           />
         )}
       </div>
-{/* Mobile menu end */}
+      {/* Mobile menu end */}
 
-   <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-      <img src={logo} alt="logo" className="logo" />
-      <NavLinks handleClick={() => setMobileMenuOpen(false)} />
-    </div>
+      <div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}>
+        <div className="logo-container">
+          <img src={logo} alt="logo" className="logo" />
+          <span class="logo-text">MeloMagic</span>
+        </div>
+        <NavLinks handleClick={() => setMobileMenuOpen(false)} />
+      </div>
     </>
   );
 };
