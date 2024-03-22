@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.webp";
 import { links } from "../../data/links";
