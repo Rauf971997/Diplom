@@ -1,18 +1,11 @@
-.loader-container {
+.error-container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
   }
   
-  .loader-image {
-    width: 8rem;
-    height: 8rem;
-    object-fit: contain;
-  }
-  
-  .loader-title {
+  .error-title {
     font-weight: bold;
     font-size: 1.5rem;
     color: white;

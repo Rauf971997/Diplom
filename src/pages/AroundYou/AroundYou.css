@@ -1,0 +1,16 @@
+.around-you-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.around-you-title {
+    font-weight:700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    text-align: left;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+

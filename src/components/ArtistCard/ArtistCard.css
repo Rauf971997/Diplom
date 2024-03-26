@@ -1,0 +1,39 @@
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 1rem;
+   border: 2px solid transparent;
+    backdrop-filter: blur(4px);
+    animation: slideup 1s ease-in-out;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .artist-card__image {
+    width: 100%;
+    height: 14rem;
+    border-radius: 0.5rem;
+  }
+  
+  .artist-card__title {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  @keyframes slideup {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

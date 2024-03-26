@@ -1,0 +1,18 @@
+.related-songs-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.related-songs-title{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: white;
+}
+
+.related-songs-list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    width: 100%;
+}

@@ -1,8 +1,9 @@
 import React from 'react';
+import './Error.css';
 
 const Error = () => (
-  <div className='w-full flex justify-center items-center'>
-    <h1 className='font-bold text-2xl text-white mt-2'>
+  <div className='error-container'>
+    <h1 className='error-title'>
       Please try again
     </h1>
   </div>

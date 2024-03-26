@@ -109,7 +109,7 @@
 
 .nav-link:focus,
 .nav-link:active {
-  color: rgb(22, 152, 152);
+  color: white;
   opacity: 1;
 }
 
