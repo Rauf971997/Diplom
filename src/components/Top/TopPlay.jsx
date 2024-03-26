@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
-import FreeMode from "swiper";
+
 
 import PlayPause from "../PlayPause/PlayPause";
 import { playPause, setActiveSong } from "../../redux/features/playerSlice";
@@ -69,9 +69,9 @@ const TopPlay = () => {
     >
       <div className="w-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
-          <h2 className="text-white font-bold  text-2xl">Top Charts</h2>
+          <h2 className="text-white font-bold  text-2xl">Top Hits</h2>
           <Link to="/top-charts">
-            <p className="text-gray-300 text-base cursor-pointer">See more</p>
+            <p className="text-gray-300 text-base cursor-pointer">View all</p>
           </Link>
         </div>
         <div className="mt-4 flex flex-col gap-1">
