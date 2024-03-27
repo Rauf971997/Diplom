@@ -98,6 +98,7 @@ const TopPlay = () => {
         </div>
 
         <Swiper
+
   slidesPerView="auto"
   spaceBetween={15}
   freeMode
@@ -107,7 +108,7 @@ const TopPlay = () => {
 >
   {topArtists?.map((song, i) => (
     <SwiperSlide
-      key={song?.id}
+     key={`${song?.id}-${i}`}
       style={{ width: '25%', height: 'auto' }}
       className="shadow-lg rounded-full animate-slideright"
     >

@@ -47,7 +47,7 @@ const Sidebar = () => {
       <div className="sidebar-desktop ">
         <div className="logo-container">
           <img src={logo} alt="logo" className="logo" />
-          <span class="logo-text">MeloMagic</span>
+          <span className="logo-text">MeloMagic</span>
         </div>
         <NavLinks />
       </div>
@@ -71,7 +71,7 @@ const Sidebar = () => {
       <div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}>
         <div className="logo-container">
           <img src={logo} alt="logo" className="logo" />
-          <span class="logo-text">MeloMagic</span>
+          <span className="logo-text">MeloMagic</span>
         </div>
         <NavLinks handleClick={() => setMobileMenuOpen(false)} />
       </div>
