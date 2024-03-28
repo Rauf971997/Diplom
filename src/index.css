@@ -49,6 +49,8 @@
   display: flex;
   flex-direction: column;
   flex: 1 1;
-  background: url("./assets/121806.jpg");
+  background: url("./assets/121806.png");
+  background-size: cover;
+  background-attachment: fixed;
 
 }
