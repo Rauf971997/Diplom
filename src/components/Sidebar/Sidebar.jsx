@@ -5,6 +5,8 @@ import { links } from "../../data/links";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import "./Sidebar.css";
 
+import { Link } from "react-router-dom";
+
 const NavLinks = ({ handleClick }) => {
   return (
     <div className="nav-links">
@@ -46,7 +48,9 @@ const Sidebar = () => {
     <>
       <div className="sidebar-desktop ">
         <div className="logo-container">
+        <Link to="/" className="logo-link">
           <img src={logo} alt="logo" className="logo" />
+          </Link >
           <span className="logo-text">MeloMagic</span>
         </div>
         <NavLinks />
