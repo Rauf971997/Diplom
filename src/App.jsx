@@ -27,7 +27,7 @@ const App = () => {
               <Route path="/search/:searchTerm" element={<Search />} />
             </Routes>
           </div>
-          <div className="sticky top-0 hidden lg:block">
+          <div className="relative top-0 hidden lg:block">
             <TopPlay />
           </div>
         </div>
