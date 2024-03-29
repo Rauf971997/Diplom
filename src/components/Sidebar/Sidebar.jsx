@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.webp";
 import { links } from "../../data/links";
@@ -43,14 +43,14 @@ const Sidebar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [mobileMenuOpen]);
-  
+
   return (
     <>
       <div className="sidebar-desktop ">
         <div className="logo-container">
-        <Link to="/" className="logo-link">
-          <img src={logo} alt="logo" className="logo" />
-          </Link >
+          <Link to="/" className="logo-link">
+            <img src={logo} alt="logo" className="logo" />
+          </Link>
           <span className="logo-text">MeloMagic</span>
         </div>
         <NavLinks />
@@ -74,7 +74,9 @@ const Sidebar = () => {
 
       <div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}>
         <div className="logo-container">
-          <img src={logo} alt="logo" className="logo" />
+          <Link to="/" className="logo-link">
+            <img src={logo} alt="logo" className="logo" />
+          </Link>
           <span className="logo-text">MeloMagic</span>
         </div>
         <NavLinks handleClick={() => setMobileMenuOpen(false)} />
