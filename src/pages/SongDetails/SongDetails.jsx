@@ -8,7 +8,7 @@ import {
   useGetSongDetailsQuery,
   useGetSongRelatedQuery,
 } from "../../redux/services/shazamCore";
-import './SongDetails.css';
+import "./SongDetails.css";
 
 const SongDetails = () => {
   const dispatch = useDispatch();
