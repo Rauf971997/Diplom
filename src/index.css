@@ -54,3 +54,8 @@
   background-attachment: fixed;
 
 }
+
+
+html, body {
+  min-width: 320px;
+}
