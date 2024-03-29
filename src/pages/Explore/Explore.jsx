@@ -4,7 +4,7 @@ import { Error, Loader, SongCard } from "../../components";
 import { selectGenreListId } from "../../redux/features/playerSlice";
 import { useGetSongsByGenreQuery } from "../../redux/services/shazamCore";
 import { genres } from "../../data/genres";
-import './Explore.css';
+
 const Explore = () => {
   const dispatch = useDispatch();
   const { activeSong, isPlaying, genreListId } = useSelector(
@@ -29,7 +29,7 @@ const Explore = () => {
         <select
           onChange={(e) => dispatch(selectGenreListId(e.target.value))}
           value={genreListId || "rock"}
-          className={`bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5 ${window.innerWidth < 640 ? 'full-width-select' : ''}`}
+          className="bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5"
         >
           {genres.map((genre) => (
             <option key={genre.value} value={genre.value}>
