@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo.webp";
+import logo from "../../assets/logo.png";
 import { links } from "../../data/links";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import "./Sidebar.css";
