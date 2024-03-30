@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 
 const Player = ({
   activeSong,
@@ -10,27 +10,41 @@ const Player = ({
   onLoadedData,
   repeat,
 }) => {
-  const ref = useRef(null);
-  if (ref.current) {
-    if (isPlaying) {
-      ref.current.play();
-    } else {
-      ref.current.pause();
-    }
-  }
+  const audioRef = useRef(null);
 
   useEffect(() => {
-    ref.current.volume = volume;
+    if (audioRef.current && activeSong?.hub?.actions?.[1]?.uri) {
+      audioRef.current.src = activeSong.hub.actions[1].uri;
+      audioRef.current.load();
+      audioRef.current.play().catch(() => {});
+    }
+  }, [activeSong]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.play().catch(() => {});
+      } else {
+        audioRef.current.pause();
+      }
+    }
+  }, [isPlaying]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
   }, [volume]);
 
   useEffect(() => {
-    ref.current.currentTime = seekTime;
+    if (audioRef.current) {
+      audioRef.current.currentTime = seekTime;
+    }
   }, [seekTime]);
 
   return (
     <audio
-      src={activeSong?.hub?.actions[1]?.uri}
-      ref={ref}
+      ref={audioRef}
       loop={repeat}
       onEnded={onEnded}
       onTimeUpdate={onTimeUpdate}
