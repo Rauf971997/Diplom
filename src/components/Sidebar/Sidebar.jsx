@@ -44,6 +44,10 @@ const Sidebar = () => {
     };
   }, [mobileMenuOpen]);
 
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <>
       <div className="sidebar-desktop ">
@@ -74,7 +78,7 @@ const Sidebar = () => {
 
       <div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}>
         <div className="logo-container">
-          <Link to="/" className="logo-link">
+          <Link to="/" className="logo-link" onClick={closeMobileMenu}>
             <img src={logo} alt="logo" className="logo" />
           </Link>
           <span className="logo-text">MeloMagic</span>
